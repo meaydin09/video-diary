@@ -69,9 +69,24 @@
    npx expo install -- --legacy-peer-deps
    ```
 
-3. **Uygulamayı başlatın / Start the application:**
+3. **Native Klasörleri Oluşturun / Generate Native Folders:**
+
+   **TR:** Bu projede native kütüphaneler bulunduğu için projeyi çalıştırmadan önce native dosyaları (`android` ve `ios` klasörlerini) oluşturmalısınız:
+   **EN:** Because this project uses native libraries, you need to generate native files (`android` and `ios` folders) before running the project:
    ```bash
-   npx expo start
+   npx expo prebuild --clean
+   ```
+
+4. **Uygulamayı başlatın / Start the application:**
+
+   **TR:** Native klasörler oluşturulduktan sonra projeyi derleyip çalıştırabilirsiniz:
+   **EN:** Once native folders are generated, you can compile and run the project:
+   ```bash
+   # Android için / For Android:
+   npx expo run:android
+
+   # iOS için / For iOS:
+   npx expo run:ios
    ```
 
 ---
